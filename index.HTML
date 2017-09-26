@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pokemon API</title>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <script src="https://use.fontawesome.com/fa4e67e080.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form action="">
+            <label for="pokemon">Enter Pokemon:</label>
+            <input type="text" name="pokemon" id="pokemon" placeholder="Ex: Squirtle or 7">
+        </form>
+
+        <div id="pokeOutput">
+                <div class="left-container">
+                    <p class="name"></p>
+                    <div class="image-container">
+                        <img src="" alt="" id="pokeImage">
+                    </div>
+
+                    <br>
+                    <button type="button" name="default" id="defaultBtn">Default</button>
+                    <button type="button" name="Shiny" id="shinyBtn">Shiny</button>
+                    <br>
+                    <button type="button" name="left" id="leftBtn" class="changeBtn"><i class="fa fa-caret-square-o-left" aria-hidden="true"></i></button>
+                    <button type="button" name="left" id="rightBtn" class="changeBtn"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></button>
+
+                </div>
+
+                <div class="right-container">
+                    <div id="stats">
+                        <p class="base-title">Base Stats</p>
+                        <span class="poke-info"><span class="stat">HP:</span> <span class="hp"></span></span>
+                        <span class="poke-info"><span class="stat">Attack:</span> <span class="attack"></span>
+                        <span class="poke-info"><span class="stat">Defense: </span><span class="defense"></span>
+                        <span class="poke-info"><span class="stat">Sp.Atk:</span> <span class="special-attack"></span>
+                        <span class="poke-info"><span class="stat">Sp.Def:</span> <span class="special-defense"></span>
+                        <span class="poke-info"><span class="stat">Speed: </span><span class="speed"></span></span>
+                    </div>
+            </div>
+                </div>
+
+        <footer>
+            <a href="https://twitter.com/AlxCrmr"> Created by: Alex Cramer</a>
+            <br>
+            <a href="https://pokeapi.co/">Created with: PokeAPI</a>
+        </footer>
+
+    <script src="javascripts/scripts.js" charset="utf-8"></script>
+    </body>
+</html>
