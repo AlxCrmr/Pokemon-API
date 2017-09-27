@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-
     $('form').on('submit', function(e) {
         e.preventDefault();
 
@@ -44,7 +42,7 @@ $(document).ready(function(){
           xhr.send();
         }
 
-        var userInput = $('#pokemon').val();
+        var userInput = $('#search').val();
         var url = 'https://pokeapi.co/api/v2/pokemon/' + userInput;
         console.log(url);
         $.ajax({
@@ -57,21 +55,76 @@ $(document).ready(function(){
                 var pokeImgBack = data.sprites.back_default;
                 var pokeImgShinyFront = data.sprites.front_shiny;
                 var pokeImgShinyBack = data.sprites.back_shiny;
+                var shiny = false;
+                var frontImg = true;
                 var speed = data.stats[0].base_stat;
                 var spDef = data.stats[1].base_stat;
                 var spAtk = data.stats[2].base_stat;
                 var def = data.stats[3].base_stat;
                 var atk = data.stats[4].base_stat;
                 var hp = data.stats[5].base_stat;
-                 $('.name').html(name);
-                  $('#pokeImage').attr('src', pokeImgFront);
+                var id = '#' + data.id;
+                var weight = data.weight;
+                var height = data.height;
+                var types = [];
+                for(var i = 0; i < data.types.length; i++){
+                    var type = data.types[i].type.name;
+                    types.push(type);
+                }
+
+                console.log(types);
+
+                function pokemonType (types) {
+                    $('#types').html("");
+                    for(var i = 0; i < types.length; i++){
+                        $('#types').append("<span class='pokeType " + types[i]+"'>" + types[i] + " </span>");
+                    }
+                }
+
+                pokemonType(types);
+                $("#defaultBtn").click(function(){
+                    $('#pokeImage').attr('src', pokeImgFront);
+                    shiny =false;
+                    frontImg = true;
+                });
+                $("#shinyBtn").click(function(){
+                    $('#pokeImage').attr('src', pokeImgShinyFront);
+                    shiny =true;
+                    frontImg = true;
+                });
+
+                $(".changeBtn").click(function(){
+                    if(shiny == false && frontImg == true){
+                        shiny =false;
+                        frontImg = false;
+                        $('#pokeImage').attr('src', pokeImgBack);
+                    }else if(shiny == false && frontImg == false){
+                        shiny =false;
+                        frontImg = true;
+                        $('#pokeImage').attr('src', pokeImgFront);
+                    }else if(shiny == true && frontImg == true){
+                        shiny =true;
+                        frontImg = false;
+                        $('#pokeImage').attr('src', pokeImgShinyBack);
+                    }else if(shiny == true && frontImg == false){
+                        shiny =true;
+                        frontImg = true;
+                        $('#pokeImage').attr('src', pokeImgShinyFront);
+                    }
+                });
+
+                $('.name').html(name);
+                $('.idNum').html(id);
+                 $('#pokeImage').attr('src', pokeImgFront);
                  $('.hp').html(hp);
                  $('.attack').html(atk);
                  $('.defense').html(def);
                  $('.special-attack').html(spAtk);
                  $('.special-defense').html(spDef);
                  $('.speed').html(speed);
-                    console.log(data);
+                 $('.weight').html(weight);
+                 $('.height').html(height);
+                //console.log(data);
              }//SUCCESS
         });//AJAX
     });//FORM

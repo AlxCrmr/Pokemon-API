@@ -1,14 +1,12 @@
-form {
-    padding: 30px 10px;
-    background-color: $pokeRed;
-    border-bottom: 5px solid $pokeGrey;
-    font-size: 1.2rem;
-    font-weight: 500;
+body{
+    font-family: sans-serif;
+    background-size: 20%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png");
 }
-#pokemon {
-    padding-left: 10px;
-    font-size: 1rem;
-    height: 30px;
+.searchBar {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #000;
 }
 .name {
     display: block;
@@ -20,24 +18,16 @@ form {
 }
 
 #pokeOutput {
-    padding: 30px 0;
-    overflow:auto;
-    height: 300px;
+    padding: 50px 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    overflow: auto;
 }
-
-.left-container {
-    float: left;
-    position: relative;
-    left: 300px;
-}
-.image-container {
-    max-height: 100px;
-}
-
-.right-container {
-    float: right;
-    position: relative;
-    right: 300px;
+#pokeImage {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
 }
 
 .base-title {
@@ -46,35 +36,4 @@ form {
 }
 .stat {
     font-weight: 700;
-}
-
-button {
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#shinyBtn{
-border: 1px $pokeRed solid;
-font-size: .9rem;
-}
-
-#defaultBtn{
-    border: 1px black solid;
-    font-size: .9rem;
-}
-
-.changeBtn {
-    border: none;
-}
-
-
-footer {
-    background-color: $pokeRed;
-    padding: 30px;
-    text-align: center;
-}
-
-footer a {
-    color: #FFF;
-    text-decoration: none;
 }
