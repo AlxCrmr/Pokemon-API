@@ -1,5 +1,5 @@
 footer {
-    background-color: #000;
+    background-color: $pokeRed;
     text-align: center;
     position:fixed;
    left:0px;
@@ -7,4 +7,13 @@ footer {
    height:50px;
    width:100%;
    color:#FFF;
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:$pokeYellow;
 }

@@ -1,18 +1,29 @@
 button{
     display:inline;
     margin:0;
-    background-color: #333;
-    color: #bebebe;
-    border: 1px solid #bebebe;
+    background-color:  #FFF;
+    color: $pokeRed;
+    border: 1px solid  $pokeRed;
     position: relative;
     left: 0px;
+    outline: none;
+    cursor: pointer;
 }
-
+button:hover{
+border: 2px solid  $pokeRed;
+}
+button:active{
+    background-color: #f4f1f1;
+}
 .bigBtn {
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 120px;
+    font-weight: 700;
+    position: relative;
+    top:-2px;
 }
 .changeBtn {
-    height: 30px;
-    width: 50px;
+    height: 40px;
+    width: 54px;
+    font-size: 1.5rem;
 }

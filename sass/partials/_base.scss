@@ -1,39 +1,55 @@
 body{
     font-family: sans-serif;
-    background-size: 20%;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png");
+    background-color:  $pokeBlue;
+    font-family: 'Iceland', cursive;
 }
 .searchBar {
     padding: 20px 0;
     text-align: center;
-    background-color: #000;
+    background-color: $pokeRed;
+    border-radius: 8px 8px 0 0;
 }
-.name {
-    display: block;
-    text-transform: capitalize;
-    font-size: 1.5rem;
+label {
+    font-size: 1.3rem;
 }
-.poke-info{
-    display: block;
+input[type=text]{
+        height: 40px;
+        padding-left: 10px;
+        font-family: 'Iceland', cursive;
 }
-
 #pokeOutput {
-    padding: 50px 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    overflow: auto;
+    padding: 20px 50px 30px;
 }
 #pokeImage {
     display: block;
-    margin: 20px auto;
-    width: 200px;
+    margin: 20px 0;
+    width: 180px;
+    position: relative;
+  left: -45px;
 }
-
 .base-title {
     font-size: 1.3rem;
     font-weight: 700;
 }
 .stat {
     font-weight: 700;
+}
+.poke-name-num {
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+}
+.size {
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+}
+.name {
+    display: block;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+.poke-info{
+    display: inline-block;
+    margin-right: 2px;
 }

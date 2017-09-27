@@ -50,38 +50,35 @@ $(document).ready(function(){
              dataType : 'json',
              method: 'GET',
              success : function(data) {
-                var name = data.forms[0].name;
-                var pokeImgFront = data.sprites.front_default;
-                var pokeImgBack = data.sprites.back_default;
-                var pokeImgShinyFront = data.sprites.front_shiny;
-                var pokeImgShinyBack = data.sprites.back_shiny;
-                var shiny = false;
-                var frontImg = true;
-                var speed = data.stats[0].base_stat;
-                var spDef = data.stats[1].base_stat;
-                var spAtk = data.stats[2].base_stat;
-                var def = data.stats[3].base_stat;
-                var atk = data.stats[4].base_stat;
-                var hp = data.stats[5].base_stat;
-                var id = '#' + data.id;
-                var weight = data.weight;
-                var height = data.height;
-                var types = [];
+                var name = data.forms[0].name,
+                      pokeImgFront = data.sprites.front_default,
+                      pokeImgBack = data.sprites.back_default,
+                      pokeImgShinyFront = data.sprites.front_shiny,
+                      pokeImgShinyBack = data.sprites.back_shiny,
+                      shiny = false,
+                      frontImg = true,
+                      speed = data.stats[0].base_stat,
+                      spDef = data.stats[1].base_stat,
+                      spAtk = data.stats[2].base_stat,
+                      def = data.stats[3].base_stat,
+                      atk = data.stats[4].base_stat,
+                      hp = data.stats[5].base_stat,
+                      id = '#' + data.id,
+                      weight = "<span class='stat'>Weight: </span>" + data.weight,
+                      height = "<span class='stat'>Height: </span>" + data.height,
+                      types = [];
                 for(var i = 0; i < data.types.length; i++){
                     var type = data.types[i].type.name;
                     types.push(type);
                 }
 
-                console.log(types);
-
                 function pokemonType (types) {
                     $('#types').html("");
                     for(var i = 0; i < types.length; i++){
-                        $('#types').append("<span class='pokeType " + types[i]+"'>" + types[i] + " </span>");
+                        $('#types').append("<div class='pokeType poke-info " + types[i]+"'>" + types[i] + " </div>");
                     }
                 }
 
-                pokemonType(types);
                 $("#defaultBtn").click(function(){
                     $('#pokeImage').attr('src', pokeImgFront);
                     shiny =false;
@@ -92,7 +89,6 @@ $(document).ready(function(){
                     shiny =true;
                     frontImg = true;
                 });
-
                 $(".changeBtn").click(function(){
                     if(shiny == false && frontImg == true){
                         shiny =false;
@@ -124,6 +120,7 @@ $(document).ready(function(){
                  $('.speed').html(speed);
                  $('.weight').html(weight);
                  $('.height').html(height);
+                 pokemonType(types);
                 //console.log(data);
              }//SUCCESS
         });//AJAX

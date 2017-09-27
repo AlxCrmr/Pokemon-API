@@ -478,59 +478,85 @@ template {
 /* line 1, ../sass/partials/_base.scss */
 body {
   font-family: sans-serif;
-  background-size: 20%;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png");
+  background-color: #3661AC;
+  font-family: 'Iceland', cursive;
 }
 
 /* line 6, ../sass/partials/_base.scss */
 .searchBar {
   padding: 20px 0;
   text-align: center;
-  background-color: #000;
+  background-color: #e8332a;
+  border-radius: 8px 8px 0 0;
 }
 
-/* line 11, ../sass/partials/_base.scss */
-.name {
-  display: block;
-  text-transform: capitalize;
-  font-size: 1.5rem;
+/* line 12, ../sass/partials/_base.scss */
+label {
+  font-size: 1.3rem;
 }
 
-/* line 16, ../sass/partials/_base.scss */
-.poke-info {
-  display: block;
+/* line 15, ../sass/partials/_base.scss */
+input[type=text] {
+  height: 40px;
+  padding-left: 10px;
+  font-family: 'Iceland', cursive;
 }
 
 /* line 20, ../sass/partials/_base.scss */
 #pokeOutput {
-  padding: 50px 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  overflow: auto;
+  padding: 20px 50px 30px;
 }
 
-/* line 27, ../sass/partials/_base.scss */
+/* line 23, ../sass/partials/_base.scss */
 #pokeImage {
   display: block;
-  margin: 20px auto;
-  width: 200px;
+  margin: 20px 0;
+  width: 180px;
+  position: relative;
+  left: -45px;
 }
 
-/* line 33, ../sass/partials/_base.scss */
+/* line 30, ../sass/partials/_base.scss */
 .base-title {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-/* line 37, ../sass/partials/_base.scss */
+/* line 34, ../sass/partials/_base.scss */
 .stat {
   font-weight: 700;
 }
 
+/* line 37, ../sass/partials/_base.scss */
+.poke-name-num {
+  display: inline-block;
+  float: left;
+  margin-left: 5px;
+}
+
+/* line 42, ../sass/partials/_base.scss */
+.size {
+  display: inline-block;
+  float: right;
+  margin-right: 5px;
+}
+
+/* line 47, ../sass/partials/_base.scss */
+.name {
+  display: block;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+
+/* line 52, ../sass/partials/_base.scss */
+.poke-info {
+  display: inline-block;
+  margin-right: 2px;
+}
+
 /* line 1, ../sass/partials/_footer.scss */
 footer {
-  background-color: #000;
+  background-color: #e8332a;
   text-align: center;
   position: fixed;
   left: 0px;
@@ -540,152 +566,193 @@ footer {
   color: #FFF;
 }
 
+/* line 12, ../sass/partials/_footer.scss */
+footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 17, ../sass/partials/_footer.scss */
+footer a:hover {
+  color: #FFCB08;
+}
+
 /* line 1, ../sass/partials/_buttons.scss */
 button {
   display: inline;
   margin: 0;
-  background-color: #333;
-  color: #bebebe;
-  border: 1px solid #bebebe;
+  background-color: #FFF;
+  color: #e8332a;
+  border: 1px solid #e8332a;
   position: relative;
   left: 0px;
+  outline: none;
+  cursor: pointer;
 }
 
-/* line 11, ../sass/partials/_buttons.scss */
-.bigBtn {
-  height: 30px;
-  width: 100px;
+/* line 12, ../sass/partials/_buttons.scss */
+button:hover {
+  border: 2px solid #e8332a;
 }
 
 /* line 15, ../sass/partials/_buttons.scss */
+button:active {
+  background-color: #f4f1f1;
+}
+
+/* line 18, ../sass/partials/_buttons.scss */
+.bigBtn {
+  height: 40px;
+  width: 120px;
+  font-weight: 700;
+  position: relative;
+  top: -2px;
+}
+
+/* line 25, ../sass/partials/_buttons.scss */
 .changeBtn {
-  height: 30px;
-  width: 50px;
+  height: 40px;
+  width: 54px;
+  font-size: 1.5rem;
 }
 
 /* line 1, ../sass/partials/_containers.scss */
 .container {
-  width: 50%;
+  width: 450px;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #111;
-  color: #FFF;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 15px;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
-/* line 10, ../sass/partials/_containers.scss */
+/* line 13, ../sass/partials/_containers.scss */
 .image-container {
   height: 300px;
-  width: 100%;
-  background-color: #58585B;
+  background-color: #89898e;
   white-space: nowrap;
-  border: 1px solid #bebebe;
+  border: 1px solid #e8332a;
+  color: #FFF;
+  font-size: 1.2rem;
 }
 
-/* line 18, ../sass/partials/_containers.scss */
-.left-container {
-  float: left;
-}
-
-/* line 22, ../sass/partials/_containers.scss */
-.right-container {
-  float: right;
-}
-
-/* line 4, ../sass/partials/_pokeTypes.scss */
+/* line 1, ../sass/partials/_pokeTypes.scss */
 .pokeType {
   padding: 5px;
   color: #FFF;
   border-radius: 5px;
   text-transform: capitalize;
+  margin-left: 5px;
+  font-weight: 700;
 }
 
-/* line 10, ../sass/partials/_pokeTypes.scss */
+/* line 9, ../sass/partials/_pokeTypes.scss */
 .normal {
   background-color: #A8A878;
 }
 
-/* line 13, ../sass/partials/_pokeTypes.scss */
+/* line 12, ../sass/partials/_pokeTypes.scss */
 .grass {
   background-color: #78C850;
 }
 
-/* line 16, ../sass/partials/_pokeTypes.scss */
+/* line 15, ../sass/partials/_pokeTypes.scss */
 .ground {
   background-color: #E0C068;
 }
 
-/* line 19, ../sass/partials/_pokeTypes.scss */
+/* line 18, ../sass/partials/_pokeTypes.scss */
 .fighting {
   background-color: #C03028;
 }
 
-/* line 22, ../sass/partials/_pokeTypes.scss */
+/* line 21, ../sass/partials/_pokeTypes.scss */
 .rock {
   background-color: #B8A038;
 }
 
-/* line 25, ../sass/partials/_pokeTypes.scss */
+/* line 24, ../sass/partials/_pokeTypes.scss */
 .steel {
   background-color: #B8B8D0;
 }
 
-/* line 28, ../sass/partials/_pokeTypes.scss */
+/* line 27, ../sass/partials/_pokeTypes.scss */
 .fire {
   background-color: #F08030;
 }
 
-/* line 31, ../sass/partials/_pokeTypes.scss */
+/* line 30, ../sass/partials/_pokeTypes.scss */
 .electric {
   background-color: #F8D030;
 }
 
-/* line 34, ../sass/partials/_pokeTypes.scss */
+/* line 33, ../sass/partials/_pokeTypes.scss */
 .flying {
   background-color: #A890F0;
 }
 
-/* line 37, ../sass/partials/_pokeTypes.scss */
+/* line 36, ../sass/partials/_pokeTypes.scss */
 .psychic {
   background-color: #F85888;
 }
 
-/* line 40, ../sass/partials/_pokeTypes.scss */
+/* line 39, ../sass/partials/_pokeTypes.scss */
 .bug {
   background-color: #A8B820;
 }
 
-/* line 43, ../sass/partials/_pokeTypes.scss */
+/* line 42, ../sass/partials/_pokeTypes.scss */
 .dragon {
   background-color: #7038F8;
 }
 
-/* line 46, ../sass/partials/_pokeTypes.scss */
+/* line 45, ../sass/partials/_pokeTypes.scss */
 .water {
   background-color: #6890F0;
 }
 
-/* line 49, ../sass/partials/_pokeTypes.scss */
+/* line 48, ../sass/partials/_pokeTypes.scss */
 .ice {
   background-color: #98D8D8;
 }
 
-/* line 52, ../sass/partials/_pokeTypes.scss */
+/* line 51, ../sass/partials/_pokeTypes.scss */
 .poison {
   background-color: #A040A0;
 }
 
-/* line 55, ../sass/partials/_pokeTypes.scss */
+/* line 54, ../sass/partials/_pokeTypes.scss */
 .dark {
   background-color: #705848;
 }
 
-/* line 58, ../sass/partials/_pokeTypes.scss */
+/* line 57, ../sass/partials/_pokeTypes.scss */
 .ghost {
   background-color: #705898;
 }
 
-/* line 61, ../sass/partials/_pokeTypes.scss */
+/* line 60, ../sass/partials/_pokeTypes.scss */
 .fairy {
   background-color: #FFAEC9;
+}
+
+/* line 1, ../sass/partials/_tables.scss */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+/* line 7, ../sass/partials/_tables.scss */
+td, th {
+  border: 1px solid #e8332a;
+  text-align: left;
+  padding: 8px;
+}
+
+/* line 13, ../sass/partials/_tables.scss */
+tr:nth-child(even) {
+  background-color: #e8332a;
 }

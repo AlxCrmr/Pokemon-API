@@ -6,43 +6,70 @@
         <link rel="stylesheet" href="stylesheets/styles.css">
         <script src="https://use.fontawesome.com/fa4e67e080.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
     </head>
     <body>
         <div class="container">
             <div class="searchBar">
                 <form action="">
-                    <label for="pokemon">Enter Pokemon:</label>
-                    <input type="text" name="pokemon" id="search" placeholder="Ex: Squirtle or 7">
+                    <label for="pokemon">PokeSearch:</label>
+                    <input type="text" name="pokemon" id="search" placeholder="Ex: Charizard or 6">
                 </form>
             </div>
 
             <div id="pokeOutput">
-                    <div class="left-container">
-                        <div ><span class="name"></span> <span class="idNum"></span></div>
-                        <div id="types"></div>
-
+                    <div class="top-container">
                         <div class="image-container">
                             <button type="button" name="left" id="leftBtn" class="changeBtn"><i class="fa fa-caret-square-o-left" aria-hidden="true"></i></button><button type="button" name="default" id="defaultBtn" class="bigBtn">Default</button><button type="button" name="Shiny" id="shinyBtn" class="bigBtn">Shiny</button><button type="button" name="left" id="rightBtn" class="changeBtn"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></button>
 
+                            <div class="poke-name-num" >
+                                <span class="name poke-info"></span>
+                                <span class="idNum poke-info"></span>
+                            </div>
+
+                            <div class="size">
+                                <span class="poke-info"><span class="weight"></span></span>
+                                <span class="poke-info"><span class="height"></span></span>
+                            </div>
+
                             <img src="" alt="" id="pokeImage">
+                            <div id="types"></div>
                         </div>
                     </div>
 
-                    <div class="right-container">
-                        <div id="stats">
-                            <p class="base-title">Base Stats:</p>
-                            <span class="poke-info "><span class="stat">HP:</span> <span class="hp"></span></span>
-                            <span class="poke-info"><span class="stat">Attack:</span> <span class="attack"></span>
-                            <span class="poke-info "><span class="stat">Defense: </span><span class="defense"></span>
-                            <span class="poke-info"><span class="stat">Sp.Atk:</span> <span class="special-attack"></span>
-                            <span class="poke-info "><span class="stat">Sp.Def:</span> <span class="special-defense"></span>
-                            <span class="poke-info"><span class="stat">Speed: </span><span class="speed"></span></span>
+                    <div class="bottom-container">
+
+                            <table>
+                                <tr>
+                                    <th>Base</th>
+                                    <th>Stats</th>
+                                </tr>
+                                <tr>
+                                    <td>HP:</td>
+                                    <td class="hp"></td>
+                                </tr>
+                                <tr>
+                                    <td>Attack:</td>
+                                    <td class="attack"></td>
+                                </tr>
+                                <tr>
+                                    <td>Defense:</td>
+                                    <td class="defense"></td>
+                                </tr>
+                                <tr>
+                                    <td>Sp.Attack:</td>
+                                    <td class="special-attack"></td>
+                                </tr>
+                                <tr>
+                                    <td>Sp.Defense:</td>
+                                    <td class="special-defense"></td>
+                                </tr>
+                                <tr>
+                                    <td>Speed:</td>
+                                    <td class="speed"></td>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="size">
-                            <span class="poke-info"><span class="stat">Weight:</span><span class="weight"></span></span>
-                            <span class="poke-info"><span class="stat">Height:</span><span class="height"></span></span>
-                        </div>
-                </div>
                     </div>
         </div>
 
